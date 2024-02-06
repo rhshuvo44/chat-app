@@ -1,10 +1,10 @@
 import { Toaster } from "react-hot-toast";
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { useAuthContext } from "./context/AuthContext";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import { useAuthContext } from "./context/AuthContext";
 function App() {
   const { authUser } = useAuthContext();
 
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={authUser ? <Home /> : <Navigate to={<Login />} />}
+          element={authUser ? <Home /> : <Navigate to={"login"} />}
         />
         <Route
           path="login"
