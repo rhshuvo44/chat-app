@@ -3,7 +3,7 @@ import { getRandomEmoji } from "../utils/emoji";
 import Conversation from "./Conversation";
 
 const Conversations = () => {
-  const { loading, conversations } = useGetConversation();
+  const {  conversations } = useGetConversation();
 
   return (
     <div className="py-2 flex flex-col overflow-auto">
